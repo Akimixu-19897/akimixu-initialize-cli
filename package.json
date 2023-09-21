@@ -1,6 +1,6 @@
 {
   "name": "akimixu-initialize-cli",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitee.com/akimixu/akimixu-initialize-cli.git"
+    "url": "https://gitee.com/akimixu/akimixu-initialize-cli.git"
   },
   "keywords": [
     "cli",

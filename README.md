@@ -4,6 +4,10 @@
 <a href="https://gitee.com/akimixu/akimixu-initialize-cli">
 https://gitee.com/akimixu/akimixu-initialize-cli
 </a>
+<br />
+<a href="https://github.com/Akimixu-19897/akimixu-initialize-cli">
+https://github.com/Akimixu-19897/akimixu-initialize-cli
+</a>
 </p>
 
 ## 目标

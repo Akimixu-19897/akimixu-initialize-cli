@@ -1,6 +1,6 @@
 {
   "name": "akimixu-initialize-cli",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "build": "rmdir /S  dist && tsc && ts-node build/index.ts && cd ./dist && npm publish",
     "commit": "git add . && git-cz ",
     "update-version": "ts-node build/version.ts",
-    "commit-version": "npm run update-version && git add . && git-cz &",
+    "commit-version": "npm run update-version && git add . && git-cz & npm run push",
+    "push": "git push origin master && git push mirror master",
     "prepare": "husky install",
     "release": "rmdir /S dist && tsc && ts-node build/index.ts"
   },

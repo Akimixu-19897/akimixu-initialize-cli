@@ -1,13 +1,13 @@
 {
   "name": "akimixu-initialize-cli",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon ./index.ts",
     "serve": "ts-node ./index.ts",
     "tsc": "tsc",
-    "build": "rmdir /S  dist && tsc && ts-node build/index.ts",
+    "build": "rmdir /S  dist && tsc && ts-node build/index.ts && cd ./dist && npm publish",
     "commit": "git add . && git-cz ",
     "update-version": "ts-node build/version.ts",
     "commit-version": "npm run update-version && git add . && git-cz &",

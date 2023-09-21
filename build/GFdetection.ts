@@ -28,39 +28,6 @@ exec(gitPullCommand, (error, stdout, stderr) => {
   }
 
   // 如果没有冲突，执行 Git push 命令
-  //   const gitPushCommand = "git push origin master";
-  //   const gitPushMirrorCommand = "git push mirror master";
-  //   exec(gitPushCommand, (error, stdout, stderr) => {
-  //     if (error) {
-  //       log(
-  //         chalk.hex("#646cff")(`Error executing 'git push':`) +
-  //           chalk.red(error.message)
-  //       );
-  //       return;
-  //     }
-
-  //     if (stderr) {
-  //       log(chalk.hex("#646cff")(`Git push stderr:`) + chalk.red(stderr));
-  //       return;
-  //     }
-  //     log(chalk.hex("#646cff")(`Git push origin successful.`));
-  //   });
-
-  //   exec(gitPushMirrorCommand, (error, stdout, stderr) => {
-  //     if (error) {
-  //       log(
-  //         chalk.hex("#646cff")(`Error executing 'git push mirror':`) +
-  //           chalk.red(error.message)
-  //       );
-  //       return;
-  //     }
-  //     if (stderr) {
-  //       log(chalk.hex("#646cff")(`Git push stderr:`) + chalk.red(stderr));
-  //       return;
-  //     }
-  //     log(chalk.hex("#646cff")(`Git push mirror successful.`));
-  //   });
-
   const gitPushCommand = "git push origin master && git push mirror master"; // 同时推送所有数据源,刚刚测试这个指令可以执行
   exec(gitPushCommand, (error, stdout, stderr) => {
     if (error) {

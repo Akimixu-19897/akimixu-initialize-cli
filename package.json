@@ -11,7 +11,7 @@
     "commit": "git add . && git-cz ",
     "update-version": "ts-node build/version.ts",
     "commit-version": "npm run update-version && git add . && git-cz & npm run push",
-    "push": "node build/GFdetection.ts",
+    "push": "ts-node build/GFdetection.ts",
     "prepare": "husky install",
     "release": "rmdir /S dist && tsc && ts-node build/index.ts"
   },

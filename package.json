@@ -1,6 +1,6 @@
 {
-  "name": "akimixu-initialize-cli",
-  "version": "1.0.13",
+  "name": "autoformat-commit",
+  "version": "1.0.14",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "release": "rmdir /S dist && tsc && ts-node build/index.ts"
   },
   "bin": {
-    "akimixu-initialize-cli": "dist/index.js"
+    "autoformat-commit": "dist/index.js"
   },
   "config": {
     "commitizen": {
@@ -29,7 +29,7 @@
   },
   "keywords": [
     "cli",
-    "akimixu-initialize-cli"
+    "autoformat-commit"
   ],
   "author": "akimixu",
   "license": "ISC",

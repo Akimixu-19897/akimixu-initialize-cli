@@ -54,18 +54,12 @@
 // 使用 cross-spawn 模块，执行 Git pull 命令
 import spawn from "cross-spawn";
 import chalk from "chalk";
+
 const log = console.log;
-
-// 设置环境变量，指定使用 ssh-agent
-process.env.SSH_AUTH_SOCK = "/run/user/<your_user_id>/keyring/ssh";
-process.env.GIT_SSH_COMMAND =
-  "ssh -o BatchMode=yes -o StrictHostKeyChecking=no";
-
-// 定义 Git命令
-const gitPullCommand = "git";
+const gitPullCommand = "git pull";
 
 // 执行 Git pull 命令
-const gitPull = spawn(gitPullCommand, ["pull"], { stdio: "inherit" });
+const gitPull = spawn(gitPullCommand, { stdio: "inherit", shell: true });
 
 // 检查 Git pull 命令是否执行成功
 gitPull.on("close", (code) => {
@@ -75,7 +69,7 @@ gitPull.on("close", (code) => {
   }
 
   // 如果没有冲突，执行 Git push 命令
-  const gitPushCommand = "git push origin master && git push mirror master"; // 同时推送所有数据源,刚刚测试这个指令可以执行,要以shell的形式执行
+  const gitPushCommand = "git push origin master && git push mirror master";
   const gitPush = spawn(gitPushCommand, {
     stdio: "inherit",
     shell: true,

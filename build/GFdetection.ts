@@ -57,10 +57,10 @@ import chalk from "chalk";
 const log = console.log;
 
 // 定义 Git pull 命令
-const gitPullCommand = "git pull";
+const gitPullCommand = "git";
 
 // 执行 Git pull 命令
-const gitPull = spawn(gitPullCommand, [], { stdio: "inherit" });
+const gitPull = spawn(gitPullCommand, ["pull"], { stdio: "inherit" });
 
 // 检查 Git pull 命令是否执行成功
 gitPull.on("close", (code) => {

@@ -4,7 +4,7 @@ import chalk from "chalk";
 const log = console.log;
 
 // 定义 Git pull 命令
-const gitPullCommand = "git pull";
+const gitPullCommand = "git pull origin master && git pull mirror master";
 
 // 执行 Git pull 命令
 exec(gitPullCommand, (error, stdout, stderr) => {

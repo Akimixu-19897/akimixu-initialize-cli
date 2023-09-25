@@ -5,7 +5,7 @@ import { getPath } from "../src/utils/path";
 const buildInit = async () => {
   const pkgJson = await getPackageJson();
   pkgJson["bin"] = {
-    "akimixu-initialize-cli": "index.js",
+    "autoformat-commit": "index.js",
   };
 
   // 去掉husky

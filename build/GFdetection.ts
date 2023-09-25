@@ -56,6 +56,11 @@ import spawn from "cross-spawn";
 import chalk from "chalk";
 const log = console.log;
 
+// 设置环境变量，指定使用 ssh-agent
+process.env.SSH_AUTH_SOCK = '/run/user/<your_user_id>/keyring/ssh';
+process.env.GIT_SSH_COMMAND = "ssh -o BatchMode=yes -o StrictHostKeyChecking=no";
+
+
 // 定义 Git命令
 const gitPullCommand = "git";
 

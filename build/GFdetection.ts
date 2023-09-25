@@ -8,12 +8,13 @@ const gitPullCommand = "git pull";
 
 // 执行 Git pull 命令
 exec(gitPullCommand, (error, stdout, stderr) => {
+  log(chalk.hex("#646cff")(`Git pull stdout:`) + chalk.green(stdout));
+  log(chalk.hex("#646cff")(`Git pull stderr:`) + chalk.red(stderr));
   if (error) {
     log(
       chalk.hex("#646cff")(`Error executing 'git pull':`) +
         chalk.red(error.message)
     );
-    log(chalk.hex("#646cff")(`Git pull error:`) + chalk.red(error));
     return;
   }
 

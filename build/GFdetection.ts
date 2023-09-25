@@ -56,7 +56,7 @@ import spawn from "cross-spawn";
 import chalk from "chalk";
 const log = console.log;
 
-// 定义 Git pull 命令
+// 定义 Git命令
 const gitPullCommand = "git";
 
 // 执行 Git pull 命令

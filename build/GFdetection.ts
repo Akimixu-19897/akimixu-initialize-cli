@@ -13,6 +13,7 @@ exec(gitPullCommand, (error, stdout, stderr) => {
       chalk.hex("#646cff")(`Error executing 'git pull':`) +
         chalk.red(error.message)
     );
+    log(chalk.hex("#646cff")(`Git pull error:`) + chalk.red(error));
     return;
   }
 

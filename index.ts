@@ -35,6 +35,11 @@ const promptList = [
         value: "vscode",
         checked: true,
       },
+      {
+        name: "jsconfig路径追踪注册(仅支持js文件)",
+        value: "jsconfig",
+        checked: true,
+      },
     ],
   },
 ];

@@ -10,6 +10,7 @@ import { huskyInit } from "./core/husky"; // 从core/husky.ts中导入huskyInit
 import { commitLintInit } from "./core/commitlint";
 import { vscodeInit } from "./core/vscode";
 import { debugProcess, debugTxt, debugError } from "./utils/debug";
+import { jsconfigInit } from "./core/jsconfig"; // 从core/jsconfig.ts中导入jsconfigInit
 
 // 开始
 export const start = async (base: string, answers: answerType) => {
@@ -38,6 +39,9 @@ export const start = async (base: string, answers: answerType) => {
 
     // 格式化VSCode格式
     hasElementInArray(plugins, "vscode") && (await vscodeInit());
+
+    // jsconfig注册
+    hasElementInArray(plugins, "jsconfig") && (await jsconfigInit());
 
     debugProcess(
       `恭喜您，成功注册${vue3 ? "vue3" : ""} 

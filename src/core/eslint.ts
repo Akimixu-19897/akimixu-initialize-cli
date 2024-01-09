@@ -42,7 +42,7 @@ export const eslintInit = async () => {
   // 通过writeInPkg方法写入package.json
   await writeInPkg(devDependencies), "devDependencies";
 
-  fs.outputFileSync(getPath("./.eslintrc.cjs"), eslintrcFn()); // 写入eslintrc
+  fs.outputFileSync(getPath("./.eslintrc.js"), eslintrcFn()); // 写入eslintrc
   fs.outputFileSync(getPath("./prettier.config.js"), prettierrcInit); // 写入prettierrc
 
   let pkgJson = await getPackageJson(); // 获取package.json

@@ -1,7 +1,6 @@
 import { getEnv } from "../utils/env"; // 获取环境变量
 
 const baseEslint = `
-'prettier/prettier': 'error',
 'accessor-pairs': 2,
 'arrow-spacing': [
   2,
@@ -24,16 +23,7 @@ camelcase: [
     properties: 'always'
   }
 ],
-'comma-dangle': [
-  'error',
-  {
-    arrays: 'never',
-    objects: 'never',
-    imports: 'never',
-    exports: 'never',
-    functions: 'never'
-  }
-],
+'comma-dangle': [2, 'never'],
 'comma-spacing': [
   2,
   {
@@ -46,7 +36,7 @@ camelcase: [
 curly: [2, 'multi-line'],
 'dot-location': [2, 'property'],
 'eol-last': 2,
-eqeqeq: 'off',
+eqeqeq: ['error', 'always', { null: 'ignore' }],
 'generator-star-spacing': [
   2,
   {
@@ -55,7 +45,14 @@ eqeqeq: 'off',
   }
 ],
 'handle-callback-err': [2, '^(err|error)$'],
-indent: 'off',
+indent: [
+  2,
+  2,
+  {
+    SwitchCase: 1
+  }
+],
+'jsx-quotes': 0,
 'key-spacing': [
   2,
   {
@@ -92,7 +89,7 @@ indent: 'off',
 'no-duplicate-case': 2,
 'no-empty-character-class': 2,
 'no-empty-pattern': 2,
-'no-eval': 0,
+'no-eval': 2,
 'no-ex-assign': 2,
 'no-extend-native': 2,
 'no-extra-bind': 2,
@@ -189,8 +186,15 @@ indent: 'off',
   }
 ],
 'padded-blocks': [2, 'never'],
-quotes: 'off',
-semi: 'off',
+quotes: [
+  2,
+  'single',
+  {
+    avoidEscape: true,
+    allowTemplateLiterals: true
+  }
+],
+semi: [2, 'never'],
 'semi-spacing': [
   2,
   {
@@ -199,7 +203,7 @@ semi: 'off',
   }
 ],
 'space-before-blocks': [2, 'always'],
-'space-before-function-paren': 'off',
+'space-before-function-paren': [2, 'never'],
 'space-in-parens': [2, 'never'],
 'space-infix-ops': 2,
 'space-unary-ops': [
@@ -209,7 +213,13 @@ semi: 'off',
     nonwords: false
   }
 ],
-'spaced-comment': 'off',
+'spaced-comment': [
+  2,
+  'always',
+  {
+    markers: ['global', 'globals', 'eslint', 'eslint-disable', '*package', '!', ',']
+  }
+],
 'template-curly-spacing': [2, 'never'],
 'use-isnan': 2,
 'valid-typeof': 2,
@@ -219,13 +229,14 @@ yoda: [2, 'never'],
 'prefer-const': 2,
 'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
 'object-curly-spacing': [
-  0,
+  2,
   'always',
   {
     objectsInObjects: false
   }
 ],
-'array-bracket-spacing': [2, 'never']
+'array-bracket-spacing': [2, 'never'],
+'vue/no-mutating-props': 0
 `;
 
 export const eslintrcFn = () => {
@@ -246,11 +257,8 @@ module.exports = {
     plugins: ['prettier'],
     extends: ['plugin:vue/recommended', 'eslint:recommended', 'plugin:prettier/recommended'],
     rules: {
-      'vue/order-in-components': 'off',
-      'vue/html-self-closing': 'off',
-      'vue/require-default-prop': 'off',
       'vue/max-attributes-per-line': [
-        0,
+        2,
         {
           singleline: 10,
           multiline: {
@@ -286,11 +294,8 @@ module.exports = {
     plugins: ['prettier'],
     extends: ['plugin:vue/vue3-recommended', 'eslint:recommended', 'plugin:prettier/recommended'],
     rules: {
-      'vue/order-in-components': 'off',
-      'vue/html-self-closing': 'off',
-      'vue/require-default-prop': 'off',
       'vue/max-attributes-per-line': [
-        0,
+        2,
         {
           singleline: 10,
           multiline: {

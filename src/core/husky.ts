@@ -33,6 +33,7 @@ export const huskyInit = async () => {
   pkgJson["lint-staged"] = {
     "*.{js,ts,vue,jsx,tsx}": ["npm run eslint"],
     "*.{js,jsx,ts,tsx,md,html,css,lees,scss,sass}": "prettier --write",
+    exclude: ["dist/**"],
   }; //
 
   fs.writeJsonSync(getPath("package.json"), pkgJson, { spaces: 2 }); // 写入package.json

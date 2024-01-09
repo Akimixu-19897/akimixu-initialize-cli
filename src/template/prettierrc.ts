@@ -15,8 +15,13 @@ module.exports = {
   requirePragma: false, // 不需要自动在文件开头插入 @prettier
   proseWrap: 'never', // 是否要换行
   htmlWhitespaceSensitivity: 'strict', // 指定HTML文件的全局空白区域敏感度。strict ignore sensitive
-  endOfLine: 'auto', // 结尾是 \n \r \n\r auto
+  endOfLine: 'auto', // 行尾换行符<lf|crlf|cr|auto>，默认lf
   rangeStart: 0, // 范围开始
-  ignorePath: ['dist/**'] // 忽略路径
+  ignorePath: ['dist/**'] ,// 忽略路径
+  // 在 HTML、Vue 和 JSX 中强制执行每行单个属性<bool>，默认false
+  singleAttributePerLine: true,
+  embeddedLanguageFormatting: 'auto', // 是否格式化嵌入式代码
+  //多行 HTML（HTML、JSX、Vue、Angular）元素放在最后一行的末尾，而不是单独放在下一行（不适用于自关闭元素）<bool>，默认false
+  bracketSameLine: true,
 }
 `;

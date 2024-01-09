@@ -28,7 +28,7 @@ export const huskyInit = async () => {
     "git config core.hooksPath .husky && chmod 700 .husky/*"; // 添加postinstallmac脚本
 
   pkgJson.scripts["eslint"] =
-    'eslint --cache --max-warnings 0  "{src,mock}/**/*.{vue,ts,js,tsx}" --fix'; // 添加eslint脚本
+    'eslint --cache --max-warnings 0  "src/**/*.{vue,ts,js,tsx}" --fix'; // 添加eslint脚本
 
   pkgJson["lint-staged"] = {
     "*.{js,ts,vue,jsx,tsx}": ["npm run eslint"],

@@ -48,6 +48,8 @@ export const start = async (base: string, answers: answerType) => {
       ${hasElementInArray(plugins, "eslint")}
       ${hasElementInArray(plugins, "husky")}
       ${hasElementInArray(plugins, "vscode")}
+      ${hasElementInArray(plugins, "commitLint")}
+      ${hasElementInArray(plugins, "jsconfig")}
       插件`
     );
 

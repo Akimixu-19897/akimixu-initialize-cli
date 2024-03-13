@@ -129,6 +129,11 @@ module.exports={
             title: 'Reverts',
             emoji: '🔂',
           },
+          '🔖updateVersion':{
+            description: '版本更新',
+            title: 'Update Version',
+            emoji: '🔖',
+          },
           '🎉init':{
             description: '初始化项目',
             title: 'Initial',

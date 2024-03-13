@@ -30,6 +30,7 @@ module.exports = {
         "📦build",
         "👷ci",
         "🔂revert",
+        "🔖updateVersion",
         "🎉init",
       ],
     ],
@@ -135,6 +136,11 @@ module.exports = {
             description: "版本回退",
             title: "Reverts",
             emoji: "🔂",
+          },
+          "🔖updateVersion": {
+            description: "版本更新",
+            title: "Update Version",
+            emoji: "🔖",
           },
           "🎉init": {
             description: "初始化项目",

@@ -49,10 +49,20 @@ module.exports={
             title: 'Features',
             emoji: '🌟',
           },
+         '🎨revise': {
+            description: '修改业务代码',
+            title: 'Features',
+            emoji: '🎨',
+          },
           '🐛fix': {
             description: '修复bug',
             title: 'Bug Fixes',
             emoji: '🐛',
+          },
+          '🔧config':{
+            description: '修改配置文件',
+            title: 'Config',
+            emoji: '🔧',
           },
           '📝docs': {
             description: '修改文档',
@@ -69,10 +79,35 @@ module.exports={
             title: 'Code Refactoring',
             emoji: '🌠',
           },
+          '🗑️del':{
+            description: '删除代码/文件',
+            title: 'Delete',
+            emoji: '🗑️',
+          },
           '🚀perf': {
             description: '性能优化',
             title: 'Performance Improvements',
             emoji: '🚀',
+          },
+          '⬇️downgrade': {
+            description: '依赖降级',
+            title: 'Downgrade',
+            emoji: '⬇️',
+          },
+          '⬆️upgrade': {
+            description: '依赖升级',
+            title: 'Upgrade',
+            emoji: '⬆️',
+          },
+          '➕add': {
+            description: '添加依赖',
+            title: 'Add',
+            emoji: '➕',
+          },
+          '➖remove': {
+            description: '移除依赖',
+            title: 'Remove',
+            emoji: '➖',
           },
           '🚨test': {
             description: '增删测试',
@@ -89,12 +124,16 @@ module.exports={
             title: 'Continuous Integrations',
             emoji: '⚙️',
           },
-
           '🔂revert': {
             description: '版本回退',
             title: 'Reverts',
             emoji: '🔂',
           },
+          '🎉init':{
+            description: '初始化项目',
+            title: 'Initial',
+            emoji: '🎉',
+          }
         },
       },
       scope: {

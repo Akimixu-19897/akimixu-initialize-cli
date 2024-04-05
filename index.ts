@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import inquirer from "inquirer"; // 交互式命令行工具
-// const inquirer = require("inquirer");
+// import inquirer from "inquirer"; // 交互式命令行工具
+const inquirer = require("inquirer");
 import initCli from "./src/cli";
 import { answerType } from "./src/types";
 

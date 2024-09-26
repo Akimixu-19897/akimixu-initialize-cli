@@ -13,7 +13,7 @@
         "resolveJsonModule": true
     },
     "include": [
-        "./index.ts",
+        "index.ts",
         "src**/*.ts"
     ]
 }
